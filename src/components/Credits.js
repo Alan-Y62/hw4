@@ -5,11 +5,13 @@ class Credits extends Component {
     render() {
       return (
           <div>
-            <img src="https://letstalkpayments.com/wp-content/uploads/2016/04/Bank.png" alt="bank"/>
-            <h1>Bank of React</h1>
-  
-            <Link to="/userProfile">User Profile</Link>
-            <Link to="/login">Log In</Link>
+            <div className="navbar">
+              <Link className="btn btn-primary mr-2" to="/"> Home </Link>
+              <Link className="btn btn-primary mr-2" to="/debits"> Debits </Link>
+              <Link className="btn btn-primary mr-2" to="/credits"> Credits </Link>
+              <Link style= {{"margin-right": "300px" }} className="btn btn-primary" to="/userprofile"> User Profile </Link>
+              <Link className="btn btn-primary" to="/login"> Log In </Link>
+            </div>
           </div>
       );
     }
