@@ -55,28 +55,36 @@ class App extends Component {
 
     const now = new Date();
     const newDebit = {
-      id: this.state.uniqueID,
       amount: parseFloat(e.target.amount.value),
       description: e.target.description.value,
       date: String(now.getFullYear()) + "-" + String(now.getMonth()) + "-" + String(now.getDay())
     }
     this.setState(prevState => ({
       debits: [...prevState.debits, newDebit],
-      uniqueID: this.state.uniqueID + 1,
       accountBalance: (this.state.accountBalance - newDebit.amount).toFixed(2)
     }))
   }
 
   addCredit = (e) => {
-    //send to debits view via props
-    //updates state based off user input
+    e.preventDefault();
+
+    const now = new Date();
+    const newCredit = {
+      amount: parseFloat(e.target.amount.value),
+      description: e.target.description.value,
+      date: String(now.getFullYear()) + "-" + String(now.getMonth()) + "-" + String(now.getDay())
+    }
+    this.setState(prevState => ({
+      credits: [...prevState.credits, newCredit],
+      accountBalance: (this.state.accountBalance - (0-newCredit.amount)).toFixed(2)
+    }))
   }
 
   render() {
 
-    const { debits } = this.state;
+    const { debits, credits } = this.state;
 
-    const creditsComponent = () => (<Credits addCredit={this.addCredit}/>);
+    const creditsComponent = () => (<Credits addCredit={this.addCredit} credits = {credits} accountBalance={this.state.accountBalance}/>);
     const debitsComponent = () => (<Debits addDebit={this.addDebit} debits = {debits} accountBalance={this.state.accountBalance}/>);
 
     const LogInComponent = () => (<Login user={this.state.currentUser} mockLogIn={this.mockLogIn} />)
