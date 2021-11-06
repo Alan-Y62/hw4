@@ -36,26 +36,24 @@ class LogIn extends Component {
 
     return (
       <div>
-        <div className="navbar">
-                <Link className="btn btn-primary mr-2" to="/"> Home </Link>
-                <Link className="btn btn-primary mr-2" to="/debits"> Debits </Link>
-                <Link className="btn btn-primary mr-2" to="/credits"> Credits </Link>
-                <Link className="btn btn-primary mr-2" to="/userprofile"> User Profile </Link>
-                <Link className="btn btn-primary" to="/login"> Log In </Link>
-        </div>
-        <div className="ml-5 mt-5">
-          <form onSubmit={this.handleSubmit}>
-            <div>
-              <label for="userName">User Name</label>
-              <input type="text" name="userName" onChange={this.handleChange} value={this.state.user.userName} />
-            </div>
-            <div>
-              <label for="password">Password</label>
-              <input type="password" name="password" />
-            </div>
-            <button>Log In</button>
-          </form>
-        </div>
+          <div className="navbar">
+            <Link className="btn btn-primary mr-2" to="/"> Home </Link>
+            <Link className="btn btn-primary mr-2" to="/debits"> Debits </Link>
+            <Link className="btn btn-primary mr-2" to="/credits"> Credits </Link>
+            <Link className="btn btn-primary mr-2" to="/userprofile"> User Profile </Link>
+            <Link className="btn btn-primary" to="/login"> Log In </Link>
+          </div>
+        <form onSubmit={this.handleSubmit}>
+          <div>
+            <label htmlFor="userName">User Name</label>
+            <input type="text" name="userName" onChange={this.handleChange} value={this.state.user.userName} />
+          </div>
+          <div>
+            <label htmlFor="password">Password</label>
+            <input type="password" name="password" />
+          </div>
+          <button>Log In</button>
+        </form>
       </div>
     )
   }
