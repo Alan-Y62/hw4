@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import {Link} from 'react-router-dom';
+import Navbar from './Navbar'
 
 class LogIn extends Component {
   constructor () {
@@ -36,24 +37,18 @@ class LogIn extends Component {
 
     return (
       <div>
-          <div className="navbar">
-            <Link className="btn btn-primary mr-2" to="/"> Home </Link>
-            <Link className="btn btn-primary mr-2" to="/debits"> Debits </Link>
-            <Link className="btn btn-primary mr-2" to="/credits"> Credits </Link>
-            <Link className="btn btn-primary mr-2" to="/userprofile"> User Profile </Link>
-            <Link className="btn btn-primary" to="/login"> Log In </Link>
-          </div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <label htmlFor="userName">User Name</label>
-            <input type="text" name="userName" onChange={this.handleChange} value={this.state.user.userName} />
-          </div>
-          <div>
-            <label htmlFor="password">Password</label>
-            <input type="password" name="password" />
-          </div>
-          <button>Log In</button>
-        </form>
+          <Navbar></Navbar>
+          <div className="container bd">
+            <form onSubmit={this.handleSubmit}>
+              <div>
+                <input type="text" name="userName" placeholder="USERNAME" onChange={this.handleChange} value={this.state.user.userName} />
+              </div>
+              <div>
+                <input type="password" name="password" placeholder="PASSWORD" />
+              </div>
+              <button className="btn btn-success">Log In</button>
+            </form>
+        </div>
       </div>
     )
   }

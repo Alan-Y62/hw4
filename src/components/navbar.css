@@ -1,0 +1,11 @@
+.navbar .container {
+    justify-content: start;
+}
+
+.container {
+    margin-left: 0px;
+}
+
+.bd {
+    margin-top: 75px;
+}

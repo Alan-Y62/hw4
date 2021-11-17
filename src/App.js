@@ -76,7 +76,7 @@ class App extends Component {
     }
     this.setState(prevState => ({
       credits: [...prevState.credits, newCredit],
-      accountBalance: (this.state.accountBalance - (0-newCredit.amount)).toFixed(2)
+      accountBalance: (this.state.accountBalance - (0-newCredit.amount)).toFixed(2) //
     }))
   }
 
