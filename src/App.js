@@ -59,9 +59,10 @@ class App extends Component {
       description: e.target.description.value,
       date: String(now.getFullYear()) + "-" + String(now.getMonth()) + "-" + String(now.getDay())
     }
+    const newbal = (this.state.accountBalance - newDebit.amount).toFixed(2)
     this.setState(prevState => ({
       debits: [...prevState.debits, newDebit],
-      accountBalance: (this.state.accountBalance - newDebit.amount).toFixed(2)
+      accountBalance: newbal
     }))
   }
 
@@ -74,9 +75,10 @@ class App extends Component {
       description: e.target.description.value,
       date: String(now.getFullYear()) + "-" + String(now.getMonth()) + "-" + String(now.getDay())
     }
+    const newbal = (this.state.accountBalance - newCredit.amount).toFixed(2)
     this.setState(prevState => ({
       credits: [...prevState.credits, newCredit],
-      accountBalance: (this.state.accountBalance - (0-newCredit.amount)).toFixed(2) //
+      accountBalance: newbal
     }))
   }
 

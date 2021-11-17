@@ -1,0 +1,12 @@
+.acc-bal {
+    background: gray;
+    width: 30vw;
+    height: 15vh;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.acc-head {
+    text-decoration: underline white 5px;
+}
