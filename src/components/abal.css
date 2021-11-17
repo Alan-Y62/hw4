@@ -10,3 +10,11 @@
 .acc-head {
     text-decoration: underline white 5px;
 }
+
+.debit {
+    color: red;
+}
+
+.credit {
+    color: green;
+}

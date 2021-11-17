@@ -9,7 +9,7 @@ class Debits extends Component {
     let debitsList = () => {
         return this.props.debits.map((debit) => {
             let date = debit.date.slice(0,10);
-            return <li className="list-group-item" key={debit.id}>${debit.amount} | {debit.description} | {date}</li>
+            return <li className="list-group-item" key={debit.id}><span className="debit">${debit.amount}</span> | {debit.description} | {date}</li>
         })
     }
 

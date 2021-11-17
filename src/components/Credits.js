@@ -10,7 +10,7 @@ class Credits extends Component {
       let creditsList = () => {
       return this.props.credits.map((credit) => {
           let date = credit.date.slice(0,10);
-          return <li className="list-group-item" key={credit.id}>${credit.amount} | {credit.description} | {date}</li>
+          return <li className="list-group-item" key={credit.id}><span className="credit">${credit.amount}</span> | {credit.description} | {date}</li>
       })
   }
 
