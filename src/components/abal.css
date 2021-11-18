@@ -1,8 +1,8 @@
 .acc-bal {
-    background: gray;
+    background: rgba(0,0,0,.3);
     width: 30vw;
     height: 15vh;
-    color: white;
+    color: black;
     text-align: center;
     padding-top: 10px;
 }
@@ -17,4 +17,10 @@
 
 .credit {
     color: green;
+}
+
+.home {
+    position: relative;
+    left: 20vw;
+    top: 10vh;
 }
