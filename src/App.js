@@ -75,7 +75,8 @@ class App extends Component {
       description: e.target.description.value,
       date: String(now.getFullYear()) + "-" + String(now.getMonth()) + "-" + String(now.getDay())
     }
-    const newbal = (this.state.accountBalance + newCredit.amount).toFixed(2)
+    //there's a bug or something where toFixed does not work with '+'
+    const newbal = (this.state.accountBalance - (0 - newCredit.amount)).toFixed(2)
     this.setState(prevState => ({
       credits: [...prevState.credits, newCredit],
       accountBalance: newbal
