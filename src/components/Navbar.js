@@ -7,13 +7,13 @@ const Navigation = () => {
         <>
             <Navbar fixed="top" bg="dark" variant="dark">
                 <Container>
-                <Navbar.Brand href="/">Bank of React</Navbar.Brand>
+                <Navbar.Brand href="/hw4">Bank of React</Navbar.Brand>
                 <Nav className="me-auto">
-                <Nav.Link as={Link} to="/">Home</Nav.Link>
-                <Nav.Link as={Link} to="/debits">My Debits</Nav.Link>
-                <Nav.Link as={Link} to="/credits">My Credits</Nav.Link>
-                <Nav.Link as={Link} to="/userprofile">Profile</Nav.Link>
-                <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                <Nav.Link as={Link} to="/hw4">Home</Nav.Link>
+                <Nav.Link as={Link} to="/hw4/debits">My Debits</Nav.Link>
+                <Nav.Link as={Link} to="/hw4/credits">My Credits</Nav.Link>
+                <Nav.Link as={Link} to="/hw4/userprofile">Profile</Nav.Link>
+                <Nav.Link as={Link} to="/hw4/login">Login</Nav.Link>
                 </Nav>
                 </Container>
             </Navbar>
